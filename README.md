@@ -3,6 +3,10 @@
 A small, offline macOS Finder Quick Action that copies the **positive prompt**
 from one or more Draw Things PNG images.
 
+⬅️ [Download the latest release here](https://github.com/Quick-Eyed-Sky/Prompt-Collector-for-Draw-Things/releases/latest)
+(then choose the ZIP in the “Assets” section). Do not use the green **Code**
+button.
+
 - Select one image: its prompt is copied as plain text.
 - Select several images: unique prompts are copied as a Dynamic Prompts choice,
   for example `{a red fox|a grey wolf|a small castle}`.
@@ -16,8 +20,9 @@ Draw Things already has an excellent “Load Settings?” flow for that job.
 
 No Terminal commands and no Automator setup are required.
 
-1. Download the latest release from the **Releases** section on the right of
-   this GitHub page. Do not use the green **Code** button.
+1. [Download the latest release](https://github.com/Quick-Eyed-Sky/Prompt-Collector-for-Draw-Things/releases/latest),
+   then choose the ZIP in the “Assets” section. Do not use the green **Code**
+   button.
 2. Double-click the downloaded ZIP; macOS creates a folder next to it.
 3. Open that folder and double-click **Install Prompt Collector.command**.
 4. A small Terminal window confirms that it is installed. Press Return to
