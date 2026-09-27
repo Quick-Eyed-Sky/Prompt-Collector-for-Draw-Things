@@ -12,47 +12,30 @@ from one or more Draw Things PNG images.
 It deliberately does **not** copy settings, models, seeds, or negative prompts.
 Draw Things already has an excellent “Load Settings?” flow for that job.
 
-## Requirements
-
-- macOS (the script uses the built-in `pbcopy` clipboard command)
-- Python 3, included with current macOS developer tools or installable from
-  [python.org](https://www.python.org/downloads/macos/)
-- PNG images exported by Draw Things
-
-No package, network request, or account is needed after installation.
-
 ## Install
 
-1. Download this repository as a ZIP from GitHub and unzip it somewhere you
-   will keep it, for example `~/Applications/Prompt-Collector`.
-2. In Terminal, make the script executable (adapt the path if needed):
+No Terminal commands and no Automator setup are required.
 
-   ```sh
-   chmod +x ~/Applications/Prompt-Collector/prompt_collector.py
-   ```
+1. Download the latest release from the **Releases** section on the right of
+   this GitHub page. Do not use the green **Code** button.
+2. Double-click the downloaded ZIP; macOS creates a folder next to it.
+3. Open that folder and double-click **Install Prompt Collector.command**.
+4. A small Terminal window confirms that it is installed. Press Return to
+   close it.
 
-3. Open **Automator** → **New Document** → **Quick Action**.
-4. Set “Workflow receives current” to **image files** in **Finder**.
-5. Add **Run Shell Script**. Set “Pass input” to **as arguments**, then use:
-
-   ```sh
-   "$HOME/Applications/Prompt-Collector/prompt_collector.py" "$@"
-   ```
-
-6. Save it as **Prompt Collector (Draw Things)**.
+If macOS says the installer cannot be opened because it is from an unidentified
+developer, Control-click it, choose **Open**, then choose **Open** again. This
+is expected for an unsigned, open-source utility.
 
 Select one or more images in Finder, then choose **Quick Actions → Prompt
 Collector (Draw Things)**. The result is immediately in the clipboard.
 
-## Test in Terminal
+## Requirements
 
-```sh
-~/Applications/Prompt-Collector/prompt_collector.py ~/Desktop/example.png
-```
-
-For multiple images, put all file paths after the command. The script reports
-how many images and unique prompts it found; Finder still performs the copy
-silently.
+- macOS
+- PNG images exported by Draw Things
+- Python 3 (included with current macOS developer tools; the installer will
+  explain if it is unavailable)
 
 ## Notes
 
